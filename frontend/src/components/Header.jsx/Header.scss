@@ -1,0 +1,26 @@
+.container_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: .5rem;
+    padding: .5rem;
+    border-bottom: 4px solid black;
+    border-radius: 10px;
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+            li {
+                margin: 1rem;
+            }
+
+            li:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}

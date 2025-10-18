@@ -1,10 +1,11 @@
 import express from 'express';
 import Navegar from './rotas.js';
-
+import cors from 'cors'
 
 
 const api = express();
 api.use(express.json());
+api.use(cors())
 Navegar(api)
 
 

@@ -1,0 +1,21 @@
+.container_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    background: #CECECE;
+    gap: 4rem;
+
+    .container_conteudo_footer {
+        display: flex;
+        justify-content: space-around;
+
+        div {
+            padding: .3rem;
+        }
+    }
+
+    .direitos {
+        text-align: center;
+    }
+}
