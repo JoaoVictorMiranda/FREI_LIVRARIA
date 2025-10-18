@@ -8,5 +8,5 @@ api.use(express.json());
 Navegar(api)
 
 
-
-api.listen( 5022, () => console.log("subiu nesta porra 5022 a porta"))
+const PORT = 5522
+api.listen(PORT, () => console.log(`Funcinando na porta ${PORT}`))

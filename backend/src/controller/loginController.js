@@ -4,6 +4,16 @@ import { generateToken } from '../utils/jwt.js'
 
 const endpoints = Router();
 
+endpoints.post('/register', async (req, res) => {
+        let usuario = req.body.usuario;
+        let senha = req.body.senha;
+
+        let info = await repo.cadastrarUsuario(usuario, senha)
+        res.send(info)
+
+})
+
+
 endpoints.post('/login', async (req, res) => {
         let usuario = req.body.usuario;
         let senha = req.body.senha;
@@ -13,8 +23,6 @@ endpoints.post('/login', async (req, res) => {
         res.send({
                 token: token
         })
-
-
 });
 
 
