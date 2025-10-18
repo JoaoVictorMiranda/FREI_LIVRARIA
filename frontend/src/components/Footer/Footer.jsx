@@ -12,7 +12,7 @@ const Footer = () => {
                 <div>
                     <h2>Contato</h2>
                     <p>
-                        (11) 91111-1111 <br /> <br />
+                        (11) 94066-2828 <br /> <br />
                         livraria@frei.com
                     </p>
                 </div>
@@ -20,8 +20,9 @@ const Footer = () => {
                     <h2>Desenvolvido por</h2>
                     <br />
                     <p>
-                        João Victor Miranda Reis <br /><br />
-                        Lucar Gil Reche
+                        <a href="https://www.github.com/JoaoVictorMiranda" target="_blank" rel="noopener noreferrer">João Victor Miranda Reis</a> <br /><br />
+                        {/* Era pra ter teu portifolio aqui mas tu tirou do ar */}
+                        <a href="https://github.com/LucasGilReche" target="_blank" rel="noopener noreferrer" >Lucas Gil Reche</a>
                     </p>
                 </div>
                 <div>
