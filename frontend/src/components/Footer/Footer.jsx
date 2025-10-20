@@ -22,7 +22,7 @@ const Footer = () => {
                     <p>
                         <a href="https://www.github.com/JoaoVictorMiranda" target="_blank" rel="noopener noreferrer">João Victor Miranda Reis</a> <br /><br />
                         {/* Era pra ter teu portifolio aqui mas tu tirou do ar */}
-                        <a href="https://github.com/LucasGilReche" target="_blank" rel="noopener noreferrer" >Lucas Gil Reche</a>
+                        <a href="https://github.com/Lucas-Silva-Manoel" target="_blank" rel="noopener noreferrer" >Lucas Silva Manoel</a>
                     </p>
                 </div>
                 <div>
