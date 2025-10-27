@@ -11,6 +11,19 @@ endpoints.get('/livros', auth, async (req, res) => {
 })
 
 
+endpoints.get('/livros/:id', auth, async (req, res) => {
+    const id = req.params.id;
+
+    let info = await repo.DetalhesLivro(id)
+    if (info[0].length === 0) {
+        res.send({ "Not Found": "Livro não achado" })
+    } else {
+        res.send(info[0])
+    }
+
+
+})
+
 endpoints.post('/livros/registrar', auth, async (req, res) => {
     const titulo = req.body.titulo;
     const autor = req.body.autor;

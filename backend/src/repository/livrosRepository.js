@@ -1,6 +1,5 @@
 import { connection } from "./connection.js";
 
-
 export async function cadastrarLivro(titulo, autor, capa_url) {
     const comando = `
         INSERT INTO livros(titulo, autor, capa_url)
@@ -13,6 +12,16 @@ export async function cadastrarLivro(titulo, autor, capa_url) {
         capa_url
     ])
     return info.insertId;
+}
+
+
+export async function DetalhesLivro(idLivro) {
+    const comando = `
+        SELECT * FROM livros
+        WHERE id = ?;
+    `;
+    let [info] = await connection.query(comando, [idLivro]);
+    return info;
 }
 
 

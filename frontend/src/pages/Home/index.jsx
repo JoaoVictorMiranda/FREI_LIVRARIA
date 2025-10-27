@@ -33,7 +33,7 @@ const Home = () => {
                 <InputPesquisa label={"Bucar por livro:"} type={"text"} placeholder={"Fareinheith"} />
                 <section className="livros">
                     {livros.map(livro =>
-                        <CardLivro key={livro.id} capa_url={livro.capa_url} titulo={livro.titulo} autor={livro.autor} />
+                        <CardLivro key={livro.id} livro={livro} />
                     )}
                 </section>
             </main>

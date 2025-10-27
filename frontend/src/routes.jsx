@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Login from './pages/login'
 import Register from './pages/cadastro'
 import NotFound from './pages/NotFound'
+import Livro from './pages/livro'
 
 export default function Navegar() {
     return (
@@ -12,6 +13,7 @@ export default function Navegar() {
                 <Route path='/' element={<Home />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
+                <Route path='/livro/:id' element={<Livro />} />
 
                 <Route path='*' element={<NotFound />} />
             </Routes>

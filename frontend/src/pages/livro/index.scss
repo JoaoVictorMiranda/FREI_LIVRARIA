@@ -1,0 +1,17 @@
+.container_detalhes_livro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .livro {
+        padding: 3rem;
+        background-color: #d9d9d9;
+        display: flex; 
+
+        img {
+            height: 400px;
+            width: 300px;
+        }
+    }
+
+}
