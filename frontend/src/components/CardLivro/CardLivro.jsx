@@ -1,11 +1,10 @@
 import React from 'react'
-import Livro from '../../assets/livros.png'
 import './CardLivro.scss'
 
-const CardLivro = ({ titulo, autor }) => {
+const CardLivro = ({ capa_url, titulo, autor }) => {
     return (
         <div className='container_card_livro'>
-            <img src={Livro} alt="AAA" />
+            <img src={capa_url} alt={capa_url} />
             <h2>{titulo}</h2>
             <h3>{autor}</h3>
 

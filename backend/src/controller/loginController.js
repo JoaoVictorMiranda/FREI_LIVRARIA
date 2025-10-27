@@ -4,25 +4,48 @@ import { generateToken } from '../utils/jwt.js'
 
 const endpoints = Router();
 
-endpoints.post('/register', async (req, res) => {
-        let usuario = req.body.usuario;
-        let senha = req.body.senha;
 
-        let info = await repo.cadastrarUsuario(usuario, senha)
-        res.send(info)
+
+
+endpoints.post('/register', async (req, res) => {
+        try {
+                let pessoa = req.body;
+                let id = await repo.cadastrarUsuario(pessoa);
+
+                res.send({
+                        novoId: id
+                })
+        }
+        catch (err) {
+                res.status(400).send({
+                        erro: err.message
+                })
+        }
 
 })
 
 
 endpoints.post('/login', async (req, res) => {
-        let usuario = req.body.usuario;
-        let senha = req.body.senha;
+        try {
+                let nome = req.body.usuario;
+                let senha = req.body.senha;
+                let usuario = await repo.login(nome, senha);
 
-        let [info] = await repo.login(usuario, senha);
-        let token = generateToken(info);
-        res.send({
-                token: token
-        })
+                if (usuario == null) {
+                        res.send({ erro: "Usuário ou senha incorreto(s)" })
+                } else {
+                        let token = generateToken(usuario);
+                        res.send({
+                                "usuario": usuario,
+                                "token": token
+                        })
+                }
+        }
+        catch (err) {
+                res.status(400).send({
+                        erro: err.message
+                })
+        }
 });
 
 

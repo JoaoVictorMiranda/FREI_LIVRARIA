@@ -1,8 +1,16 @@
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 import Logo from '../../assets/logo.svg'
 import './Footer.scss'
 
 const Footer = () => {
+    const navigate = useNavigate();
+    function deslogar() {
+        localStorage.removeItem("usuario");
+        localStorage.removeItem("token");
+        navigate('/login')
+    }
+
     return (
         <div className='container_footer'>
             <div className='container_conteudo_footer'>
@@ -28,6 +36,7 @@ const Footer = () => {
                 <div>
                     <h2>Turma</h2>
                     <p>informatica B</p>
+                    <button onClick={deslogar} >Deslogar</button>
                 </div>
             </div>
             <div className='direitos'><p>2025 @ Instituto Nossa Senhora de Fátima</p></div>

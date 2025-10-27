@@ -1,7 +1,10 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5022',
+    baseURL: 'http://localhost:5522',
+    headers: {
+        "x-access-token": localStorage.getItem("token")
+    }
 })
 
 export default api;

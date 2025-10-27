@@ -3,6 +3,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .livros {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem;
+            padding: 1rem;
+        }
     }
+
 
 }
